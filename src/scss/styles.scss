@@ -1,0 +1,17 @@
+
+// Import styles with default layout.
+@import '~bootstrap/dist/css/bootstrap.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table.mat-mdc-table {
+  display: table;
+  width: 100%;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}

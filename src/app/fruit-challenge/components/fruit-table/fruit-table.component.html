@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>Grassland Ventures Fruit Database:</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <table class="mat-table" mat-table [dataSource]="viewModel.fruitData$">
+                        <mat-text-column name="name"></mat-text-column>
+                        <mat-text-column name="id"></mat-text-column>
+                        <mat-text-column name="genus"></mat-text-column>
+                        <ng-container matColumnDef="calories">
+                            <th mat-header-cell *matHeaderCellDef> Calories</th>
+                            <td mat-cell *matCellDef="let fruit"> {{fruit.nutritions.calories}} </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+                    </table>
+                    <div class="loading-spinner-container" *ngIf="!!(viewModel.loadingFruit$|async)">
+                        <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

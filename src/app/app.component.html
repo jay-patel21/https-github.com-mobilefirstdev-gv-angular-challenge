@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navigateToFruitTable()">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-menu-item (click)="navigateToMessaging()">
+          <mat-icon>mail</mat-icon>
+          <span>Messaging</span>
+        </button>
+    </mat-menu>
+    <span>Grassland Ventures Angular Challenge</span>
+</mat-toolbar>
+<main class="py-4">
+    <router-outlet></router-outlet>
+</main>

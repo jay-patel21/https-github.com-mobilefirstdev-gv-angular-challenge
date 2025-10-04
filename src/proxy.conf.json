@@ -1,0 +1,6 @@
+{
+  "/fruit/*": {
+    "target": "https://www.fruityvice.com/api/",
+    "secure": false
+  }
+}
