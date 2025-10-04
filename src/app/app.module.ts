@@ -15,6 +15,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MessagingComponent} from './messaging-challenge/components/messaging/messaging.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   imports: [
@@ -31,7 +34,10 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     RouterModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ],
   declarations: [
     AppComponent,

@@ -11,9 +11,16 @@ export class FruitTableComponent implements OnInit {
   columnsToDisplay = ['id', 'name', 'genus', 'calories', 'carbohydrates', 'sugar'];
 
   constructor(public viewModel: FruitTableViewModel) {
-
   }
 
   ngOnInit(): void {
+  }
+
+  onFilterChange(event: any): void {
+    this.viewModel.updateFilter(event.target.value);
+  }
+
+  onSortChange(sortOption: string): void {
+    this.viewModel.updateSort(sortOption);
   }
 }
