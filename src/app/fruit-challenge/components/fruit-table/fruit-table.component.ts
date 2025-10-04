@@ -8,7 +8,7 @@ import {FruitTableViewModel} from './fruit-table-view-model';
   providers: [FruitTableViewModel]
 })
 export class FruitTableComponent implements OnInit {
-  columnsToDisplay = ['id', 'name', 'genus', 'calories'];
+  columnsToDisplay = ['id', 'name', 'genus', 'calories', 'carbohydrates', 'sugar'];
 
   constructor(public viewModel: FruitTableViewModel) {
 

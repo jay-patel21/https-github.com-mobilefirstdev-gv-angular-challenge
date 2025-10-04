@@ -14,6 +14,14 @@
                             <th mat-header-cell *matHeaderCellDef> Calories</th>
                             <td mat-cell *matCellDef="let fruit"> {{fruit.nutritions.calories}} </td>
                         </ng-container>
+                        <ng-container matColumnDef="carbohydrates">
+                            <th mat-header-cell *matHeaderCellDef> Carbohydrates</th>
+                            <td mat-cell *matCellDef="let fruit"> {{fruit.nutritions.carbohydrates}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="sugar">
+                            <th mat-header-cell *matHeaderCellDef> Sugar</th>
+                            <td mat-cell *matCellDef="let fruit"> {{fruit.nutritions.sugar}} </td>
+                        </ng-container>
                         <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
                         <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
                     </table>
