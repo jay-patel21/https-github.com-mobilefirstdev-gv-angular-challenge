@@ -1,7 +1,7 @@
 <div class="container">
   <div class="fake-phone">
-    <div *ngFor="let message of messages$ | async">
-      {{ message | json }}
+    <div *ngFor="let message of messages$ | async; let i = index">
+      <app-text-message [message]="message"></app-text-message>
     </div>
   </div>
 </div>

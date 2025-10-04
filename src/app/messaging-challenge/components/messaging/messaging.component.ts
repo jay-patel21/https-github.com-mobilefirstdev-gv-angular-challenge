@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MessagingService } from '../../services/messaging.service';
 import { Message } from '../../models/message';
+import { TextMessage } from '../../models/text-message';
 
 @Component({
   selector: 'app-messaging',
@@ -11,4 +12,10 @@ export class MessagingComponent {
   messages$ = this.messagingService.messages$;
 
   constructor(private messagingService: MessagingService) {}
+
+  // TODO: Remove this once we have the image message component
+
+  isTextMessage(message: Message): boolean {
+    return message instanceof TextMessage;
+  }
 }

@@ -1,0 +1,45 @@
+.message-container {
+  display: flex;
+  align-items: flex-end;
+  margin: 8px 0;
+  gap: 8px;
+
+  &.anna-message {
+    flex-direction: row-reverse;
+  }
+}
+
+.profile-picture {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 4px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.4;
+
+  &.anna-bubble {
+    background-color: #4267B2;
+    color: white;
+    text-align: right;
+  }
+
+  &.other-bubble {
+    background-color: #8D8E91;
+    color: white;
+    text-align: left;
+  }
+}
