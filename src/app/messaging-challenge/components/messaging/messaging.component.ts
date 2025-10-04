@@ -13,8 +13,6 @@ export class MessagingComponent {
 
   constructor(private messagingService: MessagingService) {}
 
-  // TODO: Remove this once we have the image message component
-
   isTextMessage(message: Message): boolean {
     return message instanceof TextMessage;
   }
