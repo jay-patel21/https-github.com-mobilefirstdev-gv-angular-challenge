@@ -15,6 +15,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MessagingComponent} from './messaging-challenge/components/messaging/messaging.component';
 import {FruitDialogComponent} from './fruit-challenge/components/fruit-dialog/fruit-dialog.component';
+import {FruitTableComponent} from './fruit-challenge/components/fruit-table/fruit-table.component';
 import {TextMessageComponent} from './messaging-challenge/components/text-message/text-message.component';
 import {ImageMessageComponent} from './messaging-challenge/components/image-message/image-message.component';
 import {MatCardModule} from '@angular/material/card';
@@ -48,6 +49,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     MessagingComponent,
     FruitDialogComponent,
+    FruitTableComponent,
     TextMessageComponent,
     ImageMessageComponent
   ],
