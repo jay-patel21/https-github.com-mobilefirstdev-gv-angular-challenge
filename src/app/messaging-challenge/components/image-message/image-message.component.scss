@@ -5,7 +5,7 @@
   gap: 8px;
 
   &.anna-message {
-    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .image-content {
-  flex: 1;
+  max-width: 85%;
   display: flex;
   align-items: flex-end;
 }

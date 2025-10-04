@@ -17,7 +17,8 @@ export class MessagingComponent {
   isTextMessage(message: Message): boolean {
     return message instanceof TextMessage;
   }
-
+// This was necessary to add in last commit to fix UI. 
+// for this commit only adding comment for record
   isImageMessage(message: Message): boolean {
     return message instanceof ImageMessage;
   }
