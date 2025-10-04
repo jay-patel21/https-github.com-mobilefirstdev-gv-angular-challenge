@@ -1,0 +1,13 @@
+<div class="message-container" [class.anna-message]="message.from === 'Anna'">
+  <div class="profile-picture" *ngIf="message.from !== 'Anna'">
+    <img [src]="message.profilePictureUrl" [alt]="message.from + ' profile picture'">
+  </div>
+  
+  <div class="image-content">
+    <img [src]="message.content" [alt]="'Image from ' + message.from" class="message-image">
+  </div>
+  
+  <div class="profile-picture" *ngIf="message.from === 'Anna'">
+    <img [src]="message.profilePictureUrl" [alt]="message.from + ' profile picture'">
+  </div>
+</div>

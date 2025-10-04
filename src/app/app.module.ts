@@ -14,7 +14,14 @@ import {MatMenuModule} from '@angular/material/menu';
 import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MessagingComponent} from './messaging-challenge/components/messaging/messaging.component';
+import {FruitDialogComponent} from './fruit-challenge/components/fruit-dialog/fruit-dialog.component';
+import {TextMessageComponent} from './messaging-challenge/components/text-message/text-message.component';
+import {ImageMessageComponent} from './messaging-challenge/components/image-message/image-message.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -31,11 +38,18 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     RouterModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   declarations: [
     AppComponent,
-    MessagingComponent
+    MessagingComponent,
+    FruitDialogComponent,
+    TextMessageComponent,
+    ImageMessageComponent
   ],
   providers: [
     {

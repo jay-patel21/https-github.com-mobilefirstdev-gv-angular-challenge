@@ -9,3 +9,48 @@
   width: 100%;
   justify-content: center;
 }
+
+// Table styling
+::ng-deep .mat-mdc-table .mat-mdc-row:nth-child(even) {
+  background-color: #FAFAFA !important;
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-row:nth-child(odd) {
+  background-color: #FFFFFF !important;
+}
+
+::ng-deep .mat-mdc-table .mat-mdc-row.highlight-row {
+  background-color: #31BF5D !important;
+}
+
+::ng-deep .mat-column-sugar {
+  text-align: right !important;
+}
+
+::ng-deep .mat-column-calories.low-calories {
+  font-weight: bold !important;
+}
+
+::ng-deep .mat-column-calories.low-calories .mdc-data-table__cell {
+  font-weight: bold !important;
+}
+
+// Dialog container styling
+::ng-deep .fruit-dialog-container {
+  .mat-mdc-dialog-container {
+    padding: 0 !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+  }
+}
+
+// Row hover effects
+::ng-deep .mat-mdc-table .mat-mdc-row {
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(102, 126, 234, 0.05) !important;
+  }
+}

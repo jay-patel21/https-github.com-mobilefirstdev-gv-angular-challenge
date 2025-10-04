@@ -1,0 +1,37 @@
+.message-container {
+  display: flex;
+  align-items: flex-end;
+  margin: 8px 0;
+  gap: 8px;
+
+  &.anna-message {
+    justify-content: flex-end;
+  }
+}
+
+.profile-picture {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.image-content {
+  max-width: 85%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.message-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
