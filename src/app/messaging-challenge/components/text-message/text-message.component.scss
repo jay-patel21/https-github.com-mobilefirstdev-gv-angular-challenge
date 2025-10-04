@@ -5,7 +5,7 @@
   gap: 8px;
 
   &.anna-message {
-    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .message-bubble {
-  max-width: 70%;
+  max-width: 85%;
   padding: 4px;
   border-radius: 8px;
   word-wrap: break-word;
@@ -34,7 +34,6 @@
   &.anna-bubble {
     background-color: #4267B2;
     color: white;
-    text-align: right;
   }
 
   &.other-bubble {

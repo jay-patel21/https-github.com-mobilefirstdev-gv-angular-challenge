@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MessagingService } from '../../services/messaging.service';
 import { Message } from '../../models/message';
 import { TextMessage } from '../../models/text-message';
+import { ImageMessage } from '../../models/image-message';
 
 @Component({
   selector: 'app-messaging',
@@ -15,5 +16,9 @@ export class MessagingComponent {
 
   isTextMessage(message: Message): boolean {
     return message instanceof TextMessage;
+  }
+
+  isImageMessage(message: Message): boolean {
+    return message instanceof ImageMessage;
   }
 }

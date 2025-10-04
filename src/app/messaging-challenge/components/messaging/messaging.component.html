@@ -2,6 +2,7 @@
   <div class="fake-phone">
     <div *ngFor="let message of messages$ | async; let i = index">
       <app-text-message *ngIf="isTextMessage(message)" [message]="message"></app-text-message>
+      <app-image-message *ngIf="isImageMessage(message)" [message]="message"></app-image-message>
     </div>
   </div>
 </div>
