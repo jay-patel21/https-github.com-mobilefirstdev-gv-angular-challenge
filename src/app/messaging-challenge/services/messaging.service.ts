@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {of} from 'rxjs';
+import {of, from, timer, concatMap, map, scan, startWith} from 'rxjs';
 import {TextMessage} from '../models/text-message';
 import {ImageMessage} from '../models/image-message';
 
@@ -8,7 +8,7 @@ import {ImageMessage} from '../models/image-message';
 })
 export class MessagingService {
 
-  public readonly messages$ = of([
+  public readonly messages$ = from([
     new TextMessage('Anna', 'assets/person2.png', 'Hello!'),
     new TextMessage('Bob', 'assets/person1.jpeg' ,'Hi!'),
     new TextMessage('Anna', 'assets/person2.png', 'How have you been?'),
@@ -22,6 +22,15 @@ export class MessagingService {
     ),
     new TextMessage('Bob', 'assets/person1.jpeg' ,'Wow! That\'s exciting! I can\'t wait to see what he looks like'),
     new ImageMessage('Anna', 'assets/person2.png', 'assets/dog.jpeg')
-  ])
+  ]).pipe(
+    concatMap((message, index) => {
+      const randomDelay = Math.floor(Math.random() * 4000) + 1000;
+      return timer(index === 0 ? 0 : randomDelay).pipe(
+        map(() => message)
+      );
+    }),
+    scan((acc: any[], message) => [...acc, message], []),
+    startWith([])
+  )
 
 }
