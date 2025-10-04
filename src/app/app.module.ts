@@ -14,10 +14,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MessagingComponent} from './messaging-challenge/components/messaging/messaging.component';
+import {FruitDialogComponent} from './fruit-challenge/components/fruit-dialog/fruit-dialog.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FruitTableComponent } from './fruit-challenge/components/fruit-table/fruit-table.component';
 
 @NgModule({
   imports: [
@@ -37,11 +40,13 @@ import {MatSelectModule} from '@angular/material/select';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   declarations: [
     AppComponent,
-    MessagingComponent
+    MessagingComponent,
+    FruitDialogComponent
   ],
   providers: [
     {

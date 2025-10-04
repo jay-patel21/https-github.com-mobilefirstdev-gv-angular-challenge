@@ -1,0 +1,86 @@
+<div class="fruit-dialog">
+  <div class="dialog-header">
+    <h1 class="fruit-name">{{ fruit.name }}</h1>
+    <button mat-icon-button class="close-button" (click)="onClose()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div class="dialog-content">
+    <div class="fruit-info-grid">
+      <!-- Basic Information -->
+      <div class="info-section">
+        <h3 class="section-title">Basic Information</h3>
+        <div class="info-item">
+          <span class="label">ID:</span>
+          <span class="value">{{ fruit.id }}</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Genus:</span>
+          <span class="value">{{ fruit.genus }}</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Family:</span>
+          <span class="value">{{ fruit.family }}</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Order:</span>
+          <span class="value">{{ fruit.order }}</span>
+        </div>
+      </div>
+
+      <!-- Nutrition Information -->
+      <div class="info-section nutrition-section">
+        <h3 class="section-title">Nutrition Facts</h3>
+        <div class="nutrition-grid">
+          <div class="nutrition-item calories">
+            <div class="nutrition-icon">🔥</div>
+            <div class="nutrition-content">
+              <span class="nutrition-label">Calories</span>
+              <span class="nutrition-value">{{ fruit.nutritions?.calories || 'N/A' }}</span>
+            </div>
+          </div>
+          
+          <div class="nutrition-item carbohydrates">
+            <div class="nutrition-icon">🌾</div>
+            <div class="nutrition-content">
+              <span class="nutrition-label">Carbohydrates</span>
+              <span class="nutrition-value">{{ fruit.nutritions?.carbohydrates || 'N/A' }}g</span>
+            </div>
+          </div>
+          
+          <div class="nutrition-item protein">
+            <div class="nutrition-icon">💪</div>
+            <div class="nutrition-content">
+              <span class="nutrition-label">Protein</span>
+              <span class="nutrition-value">{{ fruit.nutritions?.protein || 'N/A' }}g</span>
+            </div>
+          </div>
+          
+          <div class="nutrition-item fat">
+            <div class="nutrition-icon">🥑</div>
+            <div class="nutrition-content">
+              <span class="nutrition-label">Fat</span>
+              <span class="nutrition-value">{{ fruit.nutritions?.fat || 'N/A' }}g</span>
+            </div>
+          </div>
+          
+          <div class="nutrition-item sugar">
+            <div class="nutrition-icon">🍯</div>
+            <div class="nutrition-content">
+              <span class="nutrition-label">Sugar</span>
+              <span class="nutrition-value">{{ fruit.nutritions?.sugar || 'N/A' }}g</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-actions">
+    <button mat-raised-button color="primary" (click)="onClose()">
+      <mat-icon>check</mat-icon>
+      Got it!
+    </button>
+  </div>
+</div>
